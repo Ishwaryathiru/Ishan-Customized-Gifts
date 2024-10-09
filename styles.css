@@ -1,0 +1,105 @@
+body {
+    background-image: url('https://www.shutterstock.com/image-photo/valentines-day-flat-lay-composition-600nw-2408097933.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-container img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-left: 10px;
+}
+
+.login-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-style: italic;
+}
+
+.logo img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #2a2a72;
+    margin-left: 37%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #a64dff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #8e44ad;
+}
+
+.additional-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.additional-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.additional-links a:hover {
+    text-decoration: underline;
+}

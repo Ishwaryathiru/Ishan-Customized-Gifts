@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishan Customised Gifts</title>
+    <script src="angular.min.js"></script>
+    <script src="Script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-animate.min.js"></script>
+    <link rel="stylesheet" href="stylesp.css">
+</head>
+<body  ng-app="MyApp" ng-controller="FirstController">
+    <header>
+        <div class="logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQasWFNdR6EJs6aVauyDcCTSXm9wk34vVIK8A&s" alt="Logo">
+            <h1>Ishan Customised Gifts</h1>
+        </div>
+        <nav>
+            <a href="Home.html">Home</a>
+            <a href="#">Filter</a>
+            <a href="#">Promos</a>
+        </nav>
+        
+        <div class="Search-bar-container" >
+            <div class="Search-bar">
+                <input type="text" placeholder="Search For Gifts..." ng-model="searchitem">
+                <button type="submit">
+                    <img class="icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc8gwAjvSiT9R72FDYnDd3f8X2SSh8spT8Vqd-bFDd3eCRccnPJ6HiMJ61Ww&s" alt="Icon">
+                </button>
+            </div>
+            <div class="icons" ng-controller="FirstController">
+                <img src="https://en.pimg.jp/062/080/817/1/62080817.jpg" alt="Favorites">
+                <img src="https://t3.ftcdn.net/jpg/03/14/84/68/360_F_314846831_5jJsC7Us9obgwMjRDqFhs04dodzvnZvi.jpg" alt="Cart">
+                <img ng-click="disp()" src="https://freesvg.org/img/abstract-user-flat-4.png" alt="User">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div>
+            <h1>{{heading}}</h1>
+            <button class="gift button" ng-click="toggleGifts()">Show Gifts</button>
+            <br>
+            <div class="gift-container">
+                <div class="gift" ng-show="showGifts" ng-repeat="g in gifts|filter:searchitem">
+                    <img ng-src="{{g.image}}" alt={{g.name}}>
+                    <h3>{{g.name}}</h3>
+                    <button>Buy Now</button>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="gift-container">
+                <div class="gift" ng-show="showGifts" ng-repeat="g in giftss|filter:searchitem">
+                    <img ng-src={{g.image}} alt={{g.name}}>
+                    <h3>{{g.name}}</h3>
+                    <button>Buy Now</button>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
